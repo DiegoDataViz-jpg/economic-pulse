@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "producto": "Alpamayo Economic Pulse",
+    "version": "1.0.0",
+    "generado": "2024-12-15T08:00:00Z",
+    "periodicidad": "semanal",
+    "fuentes": ["BCRP", "INEI", "SBS", "SUNAT"]
+  },
+  "indicadores": {
+    "inflacion": {
+      "titulo": "Inflación",
+      "unidad": "% var. anual",
+      "fuente": "BCRP",
+      "series": {
+        "interanual": [
+          {"fecha": "Ene-2023", "valor": 8.66},
+          {"fecha": "Feb-2023", "valor": 8.65},
+          {"fecha": "Mar-2023", "valor": 8.40},
+          {"fecha": "Abr-2023", "valor": 7.97},
+          {"fecha": "May-2023", "valor": 7.89},
+          {"fecha": "Jun-2023", "valor": 6.46},
+          {"fecha": "Jul-2023", "valor": 5.88},
+          {"fecha": "Ago-2023", "valor": 5.56},
+          {"fecha": "Sep-2023", "valor": 4.99},
+          {"fecha": "Oct-2023", "valor": 4.26},
+          {"fecha": "Nov-2023", "valor": 3.64},
+          {"fecha": "Dic-2023", "valor": 3.24},
+          {"fecha": "Ene-2024", "valor": 3.02},
+          {"fecha": "Feb-2024", "valor": 3.02},
+          {"fecha": "Mar-2024", "valor": 3.02},
+          {"fecha": "Abr-2024", "valor": 2.40},
+          {"fecha": "May-2024", "valor": 2.28},
+          {"fecha": "Jun-2024", "valor": 2.34},
+          {"fecha": "Jul-2024", "valor": 2.72},
+          {"fecha": "Ago-2024", "valor": 2.68},
+          {"fecha": "Sep-2024", "valor": 2.17},
+          {"fecha": "Oct-2024", "valor": 1.87},
+          {"fecha": "Nov-2024", "valor": 2.10},
+          {"fecha": "Dic-2024", "valor": 2.00}
+        ]
+      }
+    },
+    "tipo_cambio": {
+      "titulo": "Tipo de Cambio",
+      "unidad": "S/. por USD",
+      "fuente": "BCRP",
+      "series": {
+        "diario": [
+          {"fecha": "Ene-2023", "valor": 3.834},
+          {"fecha": "Feb-2023", "valor": 3.836},
+          {"fecha": "Mar-2023", "valor": 3.787},
+          {"fecha": "Abr-2023", "valor": 3.765},
+          {"fecha": "May-2023", "valor": 3.749},
+          {"fecha": "Jun-2023", "valor": 3.710},
+          {"fecha": "Jul-2023", "valor": 3.660},
+          {"fecha": "Ago-2023", "valor": 3.727},
+          {"fecha": "Sep-2023", "valor": 3.766},
+          {"fecha": "Oct-2023", "valor": 3.777},
+          {"fecha": "Nov-2023", "valor": 3.740},
+          {"fecha": "Dic-2023", "valor": 3.710},
+          {"fecha": "Ene-2024", "valor": 3.721},
+          {"fecha": "Feb-2024", "valor": 3.779},
+          {"fecha": "Mar-2024", "valor": 3.802},
+          {"fecha": "Abr-2024", "valor": 3.823},
+          {"fecha": "May-2024", "valor": 3.782},
+          {"fecha": "Jun-2024", "valor": 3.775},
+          {"fecha": "Jul-2024", "valor": 3.769},
+          {"fecha": "Ago-2024", "valor": 3.735},
+          {"fecha": "Sep-2024", "valor": 3.752},
+          {"fecha": "Oct-2024", "valor": 3.810},
+          {"fecha": "Nov-2024", "valor": 3.830},
+          {"fecha": "Dic-2024", "valor": 3.780}
+        ]
+      }
+    },
+    "tasa_referencia": {
+      "titulo": "Tasa de Referencia BCRP",
+      "unidad": "%",
+      "fuente": "BCRP",
+      "series": {
+        "mensual": [
+          {"fecha": "Ene-2023", "valor": 7.75},
+          {"fecha": "Feb-2023", "valor": 7.75},
+          {"fecha": "Mar-2023", "valor": 7.75},
+          {"fecha": "Abr-2023", "valor": 7.75},
+          {"fecha": "May-2023", "valor": 7.75},
+          {"fecha": "Jun-2023", "valor": 7.75},
+          {"fecha": "Jul-2023", "valor": 7.75},
+          {"fecha": "Ago-2023", "valor": 7.75},
+          {"fecha": "Sep-2023", "valor": 7.50},
+          {"fecha": "Oct-2023", "valor": 7.25},
+          {"fecha": "Nov-2023", "valor": 7.00},
+          {"fecha": "Dic-2023", "valor": 6.75},
+          {"fecha": "Ene-2024", "valor": 6.50},
+          {"fecha": "Feb-2024", "valor": 6.25},
+          {"fecha": "Mar-2024", "valor": 6.00},
+          {"fecha": "Abr-2024", "valor": 6.00},
+          {"fecha": "May-2024", "valor": 5.75},
+          {"fecha": "Jun-2024", "valor": 5.75},
+          {"fecha": "Jul-2024", "valor": 5.75},
+          {"fecha": "Ago-2024", "valor": 5.50},
+          {"fecha": "Sep-2024", "valor": 5.25},
+          {"fecha": "Oct-2024", "valor": 5.25},
+          {"fecha": "Nov-2024", "valor": 5.00},
+          {"fecha": "Dic-2024", "valor": 5.00}
+        ]
+      }
+    },
+    "actividad_economica": {
+      "titulo": "Actividad Económica",
+      "unidad": "% var. anual",
+      "fuente": "BCRP + INEI",
+      "series": {
+        "pbi_trimestral": [
+          {"fecha": "T1-2022", "valor": 3.8},
+          {"fecha": "T2-2022", "valor": 3.5},
+          {"fecha": "T3-2022", "valor": 1.7},
+          {"fecha": "T4-2022", "valor": 1.8},
+          {"fecha": "T1-2023", "valor": 1.4},
+          {"fecha": "T2-2023", "valor": 0.6},
+          {"fecha": "T3-2023", "valor": -1.0},
+          {"fecha": "T4-2023", "valor": 3.1},
+          {"fecha": "T1-2024", "valor": 3.8},
+          {"fecha": "T2-2024", "valor": 4.2},
+          {"fecha": "T3-2024", "valor": 3.9},
+          {"fecha": "T4-2024", "valor": 4.1}
+        ]
+      }
+    },
+    "credito": {
+      "titulo": "Crédito al Sector Privado",
+      "unidad": "millones S/.",
+      "fuente": "BCRP + SBS",
+      "series": {
+        "consumo_sbs": [
+          {"fecha": "Ene-2023", "valor": 68420},
+          {"fecha": "Mar-2023", "valor": 69200},
+          {"fecha": "May-2023", "valor": 70100},
+          {"fecha": "Jul-2023", "valor": 71850},
+          {"fecha": "Sep-2023", "valor": 72400},
+          {"fecha": "Nov-2023", "valor": 73200},
+          {"fecha": "Ene-2024", "valor": 74900},
+          {"fecha": "Mar-2024", "valor": 75800},
+          {"fecha": "May-2024", "valor": 76300},
+          {"fecha": "Jul-2024", "valor": 77800},
+          {"fecha": "Sep-2024", "valor": 78500},
+          {"fecha": "Nov-2024", "valor": 79100}
+        ],
+        "morosidad": [
+          {"fecha": "Ene-2023", "valor": 3.82},
+          {"fecha": "Mar-2023", "valor": 3.91},
+          {"fecha": "May-2023", "valor": 4.05},
+          {"fecha": "Jul-2023", "valor": 4.21},
+          {"fecha": "Sep-2023", "valor": 4.32},
+          {"fecha": "Nov-2023", "valor": 4.38},
+          {"fecha": "Ene-2024", "valor": 4.52},
+          {"fecha": "Mar-2024", "valor": 4.61},
+          {"fecha": "May-2024", "valor": 4.58},
+          {"fecha": "Jul-2024", "valor": 4.55},
+          {"fecha": "Sep-2024", "valor": 4.50},
+          {"fecha": "Nov-2024", "valor": 4.48}
+        ]
+      }
+    },
+    "empleo": {
+      "titulo": "Mercado Laboral",
+      "unidad": "% desempleo Lima Metro",
+      "fuente": "INEI",
+      "series": {
+        "tasa_desempleo": [
+          {"fecha": "T1-2022", "valor": 9.8},
+          {"fecha": "T2-2022", "valor": 8.2},
+          {"fecha": "T3-2022", "valor": 7.4},
+          {"fecha": "T4-2022", "valor": 7.1},
+          {"fecha": "T1-2023", "valor": 7.8},
+          {"fecha": "T2-2023", "valor": 6.9},
+          {"fecha": "T3-2023", "valor": 6.4},
+          {"fecha": "T4-2023", "valor": 6.1},
+          {"fecha": "T1-2024", "valor": 7.2},
+          {"fecha": "T2-2024", "valor": 6.7},
+          {"fecha": "T3-2024", "valor": 6.3},
+          {"fecha": "T4-2024", "valor": 6.0}
+        ]
+      }
+    },
+    "comercio_exterior": {
+      "titulo": "Importaciones",
+      "unidad": "millones USD",
+      "fuente": "SUNAT",
+      "series": {
+        "importaciones_sunat": [
+          {"fecha": "Ene-2023", "valor": 3820},
+          {"fecha": "Feb-2023", "valor": 3650},
+          {"fecha": "Mar-2023", "valor": 4100},
+          {"fecha": "Abr-2023", "valor": 3980},
+          {"fecha": "May-2023", "valor": 4200},
+          {"fecha": "Jun-2023", "valor": 3870},
+          {"fecha": "Jul-2023", "valor": 4050},
+          {"fecha": "Ago-2023", "valor": 3920},
+          {"fecha": "Sep-2023", "valor": 4010},
+          {"fecha": "Oct-2023", "valor": 4180},
+          {"fecha": "Nov-2023", "valor": 3850},
+          {"fecha": "Dic-2023", "valor": 4350},
+          {"fecha": "Ene-2024", "valor": 3750},
+          {"fecha": "Feb-2024", "valor": 3620},
+          {"fecha": "Mar-2024", "valor": 4080},
+          {"fecha": "Abr-2024", "valor": 4050},
+          {"fecha": "May-2024", "valor": 4220},
+          {"fecha": "Jun-2024", "valor": 3940},
+          {"fecha": "Jul-2024", "valor": 4100},
+          {"fecha": "Ago-2024", "valor": 4010},
+          {"fecha": "Sep-2024", "valor": 4150},
+          {"fecha": "Oct-2024", "valor": 4280},
+          {"fecha": "Nov-2024", "valor": 3920},
+          {"fecha": "Dic-2024", "valor": 4480}
+        ],
+        "importaciones_categoria": [
+          {"categoria": "Insumos",            "pct": 42.1},
+          {"categoria": "Bienes de Capital",  "pct": 28.4},
+          {"categoria": "Bienes de Consumo",  "pct": 22.8},
+          {"categoria": "Combustibles",       "pct": 5.3},
+          {"categoria": "Otros",              "pct": 1.4}
+        ]
+      }
+    }
+  }
+}

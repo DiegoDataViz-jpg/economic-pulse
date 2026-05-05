@@ -1,0 +1,58 @@
+name: Economic Pulse — Weekly ETL
+
+on:
+  schedule:
+    - cron: '0 11 * * 1'
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Fuente a extraer (all | bcrp | inei | sbs | sunat)'
+        required: false
+        default: 'all'
+
+jobs:
+  etl-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Instalar dependencias ETL
+        run: pip install -r requirements.txt
+
+      - name: Ejecutar ETL pipeline
+        run: |
+          SOURCE="${{ github.event.inputs.source || 'all' }}"
+          python scripts/etl_pipeline.py --source "$SOURCE"
+
+      - name: Preparar assets para deploy
+        run: |
+          mkdir -p dist/data
+          cp data/economic_pulse.json dist/data/economic_pulse.json
+          cp dist/index.html dist/index.html
+
+      - name: Commit datos actualizados
+        run: |
+          git config user.name  "Alpamayo Bot"
+          git config user.email "bot@alpamayo.pe"
+          git add data/economic_pulse.json
+          git diff --staged --quiet || git commit -m "data: actualización semanal $(date +'%Y-%m-%d')"
+          git push
+
+      - name: Deploy a GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          commit_message: "deploy: Economic Pulse $(date +'%Y-%m-%d')"

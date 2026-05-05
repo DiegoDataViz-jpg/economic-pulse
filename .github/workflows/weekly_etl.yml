@@ -38,21 +38,21 @@ jobs:
 
       - name: Preparar assets para deploy
         run: |
-          mkdir -p dist/data
-          cp data/economic_pulse.json dist/data/economic_pulse.json
-          cp dist/index.html dist/index.html
+          mkdir -p deploy/data
+          cp data/economic_pulse.json deploy/data/economic_pulse.json
+          cp dist/index.html deploy/index.html
 
       - name: Commit datos actualizados
         run: |
           git config user.name  "Alpamayo Bot"
           git config user.email "bot@alpamayo.pe"
           git add data/economic_pulse.json
-          git diff --staged --quiet || git commit -m "data: actualización semanal $(date +'%Y-%m-%d')"
+          git diff --staged --quiet || git commit -m "data: actualizacion semanal $(date +'%Y-%m-%d')"
           git push
 
       - name: Deploy a GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./deploy
           commit_message: "deploy: Economic Pulse $(date +'%Y-%m-%d')"

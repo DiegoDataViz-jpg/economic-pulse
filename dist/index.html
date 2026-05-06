@@ -1,22 +1,988 @@
-<!doctype html><html data-build-id="04a8162e0c" data-git-hash="47fe53cfa0118fd58e3298c84a373a04a8162e0c" data-build-timestamp="1777928807" data-version="1.0.0" data-env="" data-color-version="v2" lang="en" data-theme="claude" data-mode="light" class="h-screen antialiased scroll-smooth"><head data-ion-ip-country="US"><link rel="preconnect" href="https://assets-proxy.anthropic.com" crossorigin><link rel="dns-prefetch" href="https://assets-proxy.anthropic.com"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title data-react-fallback>Claude</title><meta data-react-fallback name="description" content="Claude is Anthropic's AI, built for problem solvers. Tackle complex challenges, analyze data, write code, and think through your hardest work."><meta name="apple-itunes-app" content="app-id=6473753684"><meta property="og:type" content="website"><meta property="og:site_name" content="Claude"><meta property="og:image" content="https://claude.ai/images/claude_ogimage.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cd02a42d9-Vq_H3mgS.svg"><link rel="icon" type="image/png" sizes="32x32" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/ce67964e7-CAX1bqSh.png"><link rel="icon" type="image/png" sizes="16x16" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c03e51811-DebilQLI.png"><link rel="shortcut icon" href="/favicon.ico"><link rel="apple-touch-icon" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c129d018a-jJjJELY8.png"><link rel="apple-touch-startup-image" href="/images/claude_app_icon.png"><link rel="manifest" href="/manifest.json"><meta name="mobile-web-app-capable" content="yes"><link rel="preload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cc27851ad-CFxw3nG7.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c66fc489e-C-BHYa_K.woff2" as="font" type="font/woff2" crossorigin><script nonce="zS6Dbd09yHaPPq+H7p7IKw==">void 0===globalThis.process&&(globalThis.process={env:{},cwd:function(){return"/"}}),void 0===globalThis.global&&(globalThis.global=globalThis)</script><script type="application/ld+json" nonce="zS6Dbd09yHaPPq+H7p7IKw==">{
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "name": "Claude",
-            "alternateName": ["Claude.ai", "Claude by Anthropic"],
-            "url": "https://claude.com"
-          },
-          {
-            "@type": "Organization",
-            "name": "Anthropic",
-            "url": "https://www.anthropic.com",
-            "logo": "https://claude.ai/images/claude_ogimage.png",
-            "sameAs": [
-              "https://x.com/AnthropicAI",
-              "https://www.linkedin.com/company/anthropic",
-              "https://www.youtube.com/@anthropic-ai"
-            ]
-          }
-        ]
-      }</script><script nonce="zS6Dbd09yHaPPq+H7p7IKw==">!function(){try{performance.mark?.("rq_cache:preload_start");const e="keyval-store",o="keyval",r="react-query-cache",t=new Promise(t=>{if(!window.indexedDB)return void t(void 0);const c=indexedDB.open(e);c.onupgradeneeded=()=>{c.transaction?.abort()},c.onerror=()=>t(void 0),c.onsuccess=()=>{const a=c.result;if(!a.objectStoreNames.contains(o))return a.close(),indexedDB.deleteDatabase(e),void t(void 0);try{const e=a.transaction(o,"readonly").objectStore(o).get(r);e.onerror=()=>{a.close(),t(void 0)},e.onsuccess=()=>{a.close(),window.__PRELOADED_IDB_CACHE_RESULT__=e.result,t(e.result)}}catch{a.close(),t(void 0)}}});window.__PRELOADED_IDB_CACHE__=t,performance.measure?.("rq_cache:preload_exec",{start:"rq_cache:preload_start"})}catch{}}()</script><script type="module" crossorigin src="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-DLNBJmo1.js" nonce="zS6Dbd09yHaPPq+H7p7IKw=="></script><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-M5bvNgJl.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c2ee0272b-CK1zxjnO.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c572cda51-DSmNkR2-.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/ce3e25bac-q6nke9tj.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/tree-sitter-BfScwQVn.js"><link rel="stylesheet" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c572cda51-D9ryz93g.css"><link rel="stylesheet" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6a992d55-C1xKZKGG.css"></head><body class="bg-bg-100 text-text-100 font-ui min-h-screen"><div id="root"></div><script nonce="zS6Dbd09yHaPPq+H7p7IKw==">(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.nonce='zS6Dbd09yHaPPq+H7p7IKw==';d.innerHTML="window.__CF$cv$params={r:'9f6d9c37ead5a0df',t:'MTc3Nzk2MTcyMQ=='};var a=document.createElement('script');a.nonce='zS6Dbd09yHaPPq+H7p7IKw==';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alpamayo Economic Pulse</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+/* ── Variables ──────────────────────────────────────────────────── */
+:root {
+  --ink:       #0d1117;
+  --paper:     #f8f5ef;
+  --cream:     #ede8de;
+  --rust:      #c0392b;
+  --gold:      #c9922a;
+  --teal:      #1d7874;
+  --slate:     #3d4f5c;
+  --muted:     #8c9aaa;
+  --positive:  #2e7d5e;
+  --negative:  #c0392b;
+  --neutral:   #6b7c8d;
+  --border:    rgba(13,17,23,.10);
+  --shadow-sm: 0 1px 3px rgba(13,17,23,.06), 0 1px 2px rgba(13,17,23,.06);
+  --shadow-md: 0 4px 16px rgba(13,17,23,.08), 0 2px 6px rgba(13,17,23,.05);
+  --shadow-lg: 0 12px 40px rgba(13,17,23,.12), 0 4px 12px rgba(13,17,23,.06);
+  --r:         8px;
+  --r-lg:      14px;
+}
+
+/* ── Reset ──────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── Typography ─────────────────────────────────────────────────── */
+.serif { font-family: 'DM Serif Display', serif; }
+.mono  { font-family: 'DM Mono', monospace; }
+
+/* ── Layout ─────────────────────────────────────────────────────── */
+.wrapper { max-width: 1360px; margin: 0 auto; padding: 0 28px; }
+
+/* ── Header ─────────────────────────────────────────────────────── */
+header {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--rust);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.25rem;
+  letter-spacing: -.01em;
+  color: var(--paper);
+}
+
+.brand-sub {
+  font-family: 'DM Mono', monospace;
+  font-size: .62rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.header-meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: .65rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.live-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: .65rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #4caf50;
+}
+
+.live-dot::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: #4caf50;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .5; transform: scale(.8); }
+}
+
+/* ── Narrative Banner ────────────────────────────────────────────── */
+.narrative-banner {
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 28px;
+}
+
+.narrative-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.narrative-label {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.narrative-label span {
+  color: var(--rust);
+}
+
+.narrative-text {
+  font-size: .875rem;
+  color: var(--slate);
+  line-height: 1.65;
+  border-left: 2px solid var(--rust);
+  padding-left: 16px;
+}
+
+.narrative-text strong { color: var(--ink); font-weight: 600; }
+
+/* ── KPI Strip ──────────────────────────────────────────────────── */
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+
+.kpi-card {
+  background: #fff;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  transition: background .15s;
+}
+
+.kpi-card:hover { background: #fafafa; }
+.kpi-card.active { background: var(--ink); color: var(--paper); }
+
+.kpi-label {
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.kpi-card.active .kpi-label { color: rgba(248,245,239,.6); }
+
+.kpi-value {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.85rem;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.kpi-card.active .kpi-value { color: var(--paper); }
+
+.kpi-delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'DM Mono', monospace;
+  font-size: .7rem;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.kpi-delta.up   { color: var(--positive); }
+.kpi-delta.down { color: var(--negative); }
+.kpi-delta.flat { color: var(--neutral); }
+
+.kpi-card.active .kpi-delta.up   { color: #81c995; }
+.kpi-card.active .kpi-delta.down { color: #f28b82; }
+
+.kpi-source {
+  font-size: .6rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.kpi-card.active .kpi-source { color: rgba(248,245,239,.4); }
+
+/* ── Section titles ──────────────────────────────────────────────── */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+
+.section-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: .62rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+
+/* ── Chart Grid ─────────────────────────────────────────────────── */
+.main-content { padding: 32px 0 60px; }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.grid-wide {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* ── Chart Card ─────────────────────────────────────────────────── */
+.chart-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .2s;
+}
+
+.chart-card:hover { box-shadow: var(--shadow-md); }
+
+.chart-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.chart-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1rem;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.chart-subtitle {
+  font-size: .72rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.chart-latest {
+  text-align: right;
+}
+
+.chart-latest-val {
+  font-family: 'DM Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.chart-latest-lbl {
+  font-size: .65rem;
+  color: var(--muted);
+}
+
+.chart-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.chart-wrap canvas { width: 100% !important; }
+
+/* ── Donut card ────────────────────────────────────────────────── */
+.donut-legend {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.donut-legend-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: .78rem;
+}
+
+.donut-legend-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--slate);
+}
+
+.donut-swatch {
+  width: 10px; height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.donut-pct {
+  font-family: 'DM Mono', monospace;
+  font-size: .76rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* ── Morosidad band ───────────────────────────────────────────── */
+.alert-band {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(192,57,43,.06);
+  border: 1px solid rgba(192,57,43,.15);
+  border-radius: var(--r);
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  font-size: .78rem;
+  color: var(--rust);
+}
+
+.alert-band .icon { font-size: 1rem; flex-shrink: 0; }
+
+/* ── Footer ─────────────────────────────────────────────────────── */
+footer {
+  background: var(--ink);
+  color: rgba(248,245,239,.5);
+  padding: 24px 28px;
+  font-size: .72rem;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: .04em;
+}
+
+.footer-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-brand { color: var(--gold); }
+
+/* ── Range tabs ─────────────────────────────────────────────────── */
+.range-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--cream);
+  border-radius: 6px;
+  padding: 3px;
+}
+
+.range-tab {
+  font-family: 'DM Mono', monospace;
+  font-size: .65rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--muted);
+  border: none;
+  background: transparent;
+  transition: all .15s;
+}
+
+.range-tab.active {
+  background: #fff;
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .grid-2, .grid-3, .grid-wide { grid-template-columns: 1fr; }
+  .kpi-strip { grid-template-columns: repeat(3, 1fr); }
+  .narrative-inner { grid-template-columns: 1fr; gap: 10px; }
+  .narrative-label { font-size: 1.2rem; }
+}
+
+@media (max-width: 600px) {
+  .kpi-strip { grid-template-columns: 1fr 1fr; }
+  .header-badge { display: none; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ── HEADER ──────────────────────────────────────────────────────────── -->
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-name">Alpamayo Economic Pulse</span>
+      <span class="brand-sub">Alpamayo Data Lab · Perú</span>
+    </div>
+    <div class="header-meta">
+      <span class="header-badge" id="update-label">Actualizado: —</span>
+      <span class="live-dot">En vivo</span>
+    </div>
+  </div>
+</header>
+
+<!-- ── NARRATIVE BANNER ───────────────────────────────────────────────── -->
+<div class="narrative-banner">
+  <div class="narrative-inner">
+    <div class="narrative-label serif">Pulso<br><span>Económico</span></div>
+    <p class="narrative-text" id="narrative-text">
+      Cargando análisis…
+    </p>
+  </div>
+</div>
+
+<!-- ── KPI STRIP ─────────────────────────────────────────────────────── -->
+<div class="kpi-strip" id="kpi-strip">
+  <div class="kpi-card active" data-target="s-inflacion">
+    <div class="kpi-label">Inflación</div>
+    <div class="kpi-value" id="kpi-inflacion">—</div>
+    <div class="kpi-delta" id="kpi-inflacion-delta">—</div>
+    <div class="kpi-source">BCRP · var. anual</div>
+  </div>
+  <div class="kpi-card" data-target="s-tc">
+    <div class="kpi-label">Tipo de Cambio</div>
+    <div class="kpi-value" id="kpi-tc">—</div>
+    <div class="kpi-delta" id="kpi-tc-delta">—</div>
+    <div class="kpi-source">BCRP · S/. por USD</div>
+  </div>
+  <div class="kpi-card" data-target="s-pbi">
+    <div class="kpi-label">PBI</div>
+    <div class="kpi-value" id="kpi-pbi">—</div>
+    <div class="kpi-delta" id="kpi-pbi-delta">—</div>
+    <div class="kpi-source">INEI · var. anual trim.</div>
+  </div>
+  <div class="kpi-card" data-target="s-credito">
+    <div class="kpi-label">Morosidad</div>
+    <div class="kpi-value" id="kpi-mora">—</div>
+    <div class="kpi-delta" id="kpi-mora-delta">—</div>
+    <div class="kpi-source">SBS · % cartera</div>
+  </div>
+  <div class="kpi-card" data-target="s-empleo">
+    <div class="kpi-label">Desempleo</div>
+    <div class="kpi-value" id="kpi-emp">—</div>
+    <div class="kpi-delta" id="kpi-emp-delta">—</div>
+    <div class="kpi-source">INEI · Lima Metro</div>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ───────────────────────────────────────────────────── -->
+<div class="main-content">
+<div class="wrapper">
+
+  <!-- ROW 1: Inflación + Tipo de Cambio -->
+  <div class="grid-2" id="s-inflacion">
+    <div class="chart-card">
+      <div class="chart-card-header">
+        <div>
+          <div class="chart-title">Inflación IPC Lima</div>
+          <div class="chart-subtitle">Variación anual — Fuente BCRP</div>
+        </div>
+        <div class="chart-latest">
+          <div class="chart-latest-val" id="lbl-inflacion">—</div>
+          <div class="chart-latest-lbl">último dato</div>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="chart-inflacion" height="200"></canvas></div>
+    </div>
+
+    <div class="chart-card" id="s-tc">
+      <div class="chart-card-header">
+        <div>
+          <div class="chart-title">Tipo de Cambio USD/PEN</div>
+          <div class="chart-subtitle">Promedio mensual — Fuente BCRP</div>
+        </div>
+        <div class="chart-latest">
+          <div class="chart-latest-val" id="lbl-tc">—</div>
+          <div class="chart-latest-lbl">último dato</div>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="chart-tc" height="200"></canvas></div>
+    </div>
+  </div>
+
+  <!-- ROW 2: PBI + Tasa de Referencia + Empleo -->
+  <div class="grid-3" id="s-pbi">
+    <div class="chart-card">
+      <div class="chart-card-header">
+        <div>
+          <div class="chart-title">PBI — Var. Trimestral</div>
+          <div class="chart-subtitle">% var. anual — Fuente INEI</div>
+        </div>
+        <div class="chart-latest">
+          <div class="chart-latest-val" id="lbl-pbi">—</div>
+          <div class="chart-latest-lbl">último trim.</div>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="chart-pbi" height="210"></canvas></div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-card-header">
+        <div>
+          <div class="chart-title">Tasa de Referencia</div>
+          <div class="chart-subtitle">% — Política monetaria BCRP</div>
+        </div>
+        <div class="chart-latest">
+          <div class="chart-latest-val" id="lbl-tasa">—</div>
+          <div class="chart-latest-lbl">actual</div>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="chart-tasa" height="210"></canvas></div>
+    </div>
+
+    <div class="chart-card" id="s-empleo">
+      <div class="chart-card-header">
+        <div>
+          <div class="chart-title">Tasa de Desempleo</div>
+          <div class="chart-subtitle">Lima Metropolitana — Fuente INEI</div>
+        </div>
+        <div class="chart-latest">
+          <div class="chart-latest-val" id="lbl-emp">—</div>
+          <div class="chart-latest-lbl">último trim.</div>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="chart-emp" height="210"></canvas></div>
+    </div>
+  </div>
+
+  <!-- ROW 3: Crédito + Morosidad + Importaciones -->
+  <div class="grid-wide" id="s-credito">
+    <div class="chart-card">
+      <div class="chart-card-header">
+        <div>
+          <div class="chart-title">Crédito de Consumo</div>
+          <div class="chart-subtitle">Millones S/. — Fuente SBS</div>
+        </div>
+        <div class="chart-latest">
+          <div class="chart-latest-val" id="lbl-cred">—</div>
+          <div class="chart-latest-lbl">último dato</div>
+        </div>
+      </div>
+      <div class="alert-band" id="mora-alert" style="display:none">
+        <span class="icon">⚠</span>
+        <span id="mora-alert-text"></span>
+      </div>
+      <div class="chart-wrap"><canvas id="chart-cred" height="200"></canvas></div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-card-header">
+        <div>
+          <div class="chart-title">Morosidad Bancaria</div>
+          <div class="chart-subtitle">% cartera — Fuente SBS</div>
+        </div>
+        <div class="chart-latest">
+          <div class="chart-latest-val" id="lbl-mora">—</div>
+          <div class="chart-latest-lbl">actual</div>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="chart-mora" height="200"></canvas></div>
+    </div>
+  </div>
+
+  <!-- ROW 4: Importaciones SUNAT -->
+  <div class="grid-wide">
+    <div class="chart-card">
+      <div class="chart-card-header">
+        <div>
+          <div class="chart-title">Importaciones Mensuales</div>
+          <div class="chart-subtitle">Millones USD — Fuente SUNAT</div>
+        </div>
+        <div class="chart-latest">
+          <div class="chart-latest-val" id="lbl-imp">—</div>
+          <div class="chart-latest-lbl">último mes</div>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="chart-imp" height="200"></canvas></div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-card-header">
+        <div>
+          <div class="chart-title">Importaciones por Categoría</div>
+          <div class="chart-subtitle">% del total — Fuente SUNAT</div>
+        </div>
+      </div>
+      <div class="chart-wrap" style="max-width:220px;margin:0 auto">
+        <canvas id="chart-donut" height="220"></canvas>
+      </div>
+      <div class="donut-legend" id="donut-legend"></div>
+    </div>
+  </div>
+
+</div><!-- /wrapper -->
+</div><!-- /main-content -->
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-brand">Alpamayo Data Lab</span>
+    <span>Fuentes: BCRP · INEI · SBS · SUNAT</span>
+    <span id="footer-date">—</span>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════════
+   Alpamayo Economic Pulse — Dashboard JS
+   ═══════════════════════════════════════════════════════════════════ */
+
+// ── Chart defaults ──────────────────────────────────────────────────
+Chart.defaults.font.family = "'Inter', sans-serif";
+Chart.defaults.font.size   = 11;
+Chart.defaults.color       = '#8c9aaa';
+Chart.defaults.plugins.legend.display = false;
+Chart.defaults.plugins.tooltip.backgroundColor = '#0d1117';
+Chart.defaults.plugins.tooltip.titleFont = { family: "'DM Mono', monospace", size: 10 };
+Chart.defaults.plugins.tooltip.bodyFont  = { family: "'DM Mono', monospace", size: 12 };
+Chart.defaults.plugins.tooltip.padding   = 10;
+Chart.defaults.plugins.tooltip.cornerRadius = 6;
+
+const COLORS = {
+  rust:     '#c0392b',
+  gold:     '#c9922a',
+  teal:     '#1d7874',
+  slate:    '#3d4f5c',
+  muted:    '#ccd5df',
+  positive: '#2e7d5e',
+};
+
+// ── Helpers ─────────────────────────────────────────────────────────
+const last = arr => arr[arr.length - 1];
+const prev = arr => arr[arr.length - 2];
+const fmt  = (n, dec=2) => n?.toFixed(dec);
+const fmtM = n => n ? `S/. ${(n/1000).toFixed(1)}B` : '—';
+
+function makeDelta(curr, prev, inverse=false) {
+  const diff  = curr - prev;
+  const arrow = diff > 0 ? '↑' : diff < 0 ? '↓' : '→';
+  const cls   = diff === 0 ? 'flat'
+              : inverse
+              ? (diff > 0 ? 'down' : 'up')
+              : (diff > 0 ? 'up'   : 'down');
+  return { html: `${arrow} ${Math.abs(diff).toFixed(2)}`, cls };
+}
+
+function setKpi(id, val, delta) {
+  document.getElementById(id).textContent      = val;
+  const el = document.getElementById(id + '-delta');
+  if (el) { el.textContent = delta.html; el.className = `kpi-delta ${delta.cls}`; }
+}
+
+// ── Line chart factory ───────────────────────────────────────────────
+function lineChart(id, labels, data, color, fill=true, tension=.35) {
+  const ctx = document.getElementById(id).getContext('2d');
+  const grad = ctx.createLinearGradient(0,0,0,200);
+  grad.addColorStop(0, color + '22');
+  grad.addColorStop(1, color + '00');
+  return new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        data,
+        borderColor: color,
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 4,
+        pointHoverBackgroundColor: color,
+        fill: fill,
+        backgroundColor: grad,
+        tension,
+      }]
+    },
+    options: {
+      responsive: true,
+      interaction: { intersect: false, mode: 'index' },
+      scales: {
+        x: { grid: { display: false }, ticks: { maxTicksLimit: 8, maxRotation: 0 } },
+        y: { grid: { color: '#f0ece4' }, ticks: { maxTicksLimit: 5 } }
+      },
+      plugins: { tooltip: { displayColors: false } },
+      animation: { duration: 600, easing: 'easeOutQuart' }
+    }
+  });
+}
+
+// ── Bar chart factory ────────────────────────────────────────────────
+function barChart(id, labels, data, color, negColor) {
+  const ctx = document.getElementById(id).getContext('2d');
+  return new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        data,
+        backgroundColor: data.map(v => v >= 0 ? color + 'cc' : (negColor || COLORS.rust) + 'cc'),
+        borderColor:     data.map(v => v >= 0 ? color        : (negColor || COLORS.rust)),
+        borderWidth: 1.5,
+        borderRadius: 3,
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: { grid: { display: false }, ticks: { maxTicksLimit: 8, maxRotation: 0 } },
+        y: { grid: { color: '#f0ece4' }, ticks: { maxTicksLimit: 5 } }
+      },
+      plugins: { tooltip: { displayColors: false } },
+      animation: { duration: 600, easing: 'easeOutQuart' }
+    }
+  });
+}
+
+// ── Donut chart factory ──────────────────────────────────────────────
+function donutChart(id, labels, data, colors) {
+  const ctx = document.getElementById(id).getContext('2d');
+  return new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels,
+      datasets: [{ data, backgroundColor: colors, borderWidth: 2, borderColor: '#fff', hoverOffset: 6 }]
+    },
+    options: {
+      responsive: true,
+      cutout: '65%',
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: { label: ctx => ` ${ctx.label}: ${ctx.formattedValue}%` }
+        }
+      },
+      animation: { duration: 700 }
+    }
+  });
+}
+
+// ── Generate narrative ───────────────────────────────────────────────
+function buildNarrative(d) {
+  const inf = last(d.inflacion.series.interanual)?.valor;
+  const tc  = last(d.tipo_cambio.series.diario)?.valor;
+  const pbi = last(d.actividad_economica.series.pbi_trimestral)?.valor;
+  const mor = last(d.credito.series.morosidad)?.valor;
+  const emp = last(d.empleo.series.tasa_desempleo)?.valor;
+
+  const infColor  = inf  < 3  ? '#2e7d5e' : inf  < 6 ? '#c9922a' : '#c0392b';
+  const pbiColor  = pbi  > 3  ? '#2e7d5e' : pbi  > 0 ? '#c9922a' : '#c0392b';
+  const morColor  = mor  < 4  ? '#2e7d5e' : mor  < 5 ? '#c9922a' : '#c0392b';
+  const empColor  = emp  < 6  ? '#2e7d5e' : emp  < 8 ? '#c9922a' : '#c0392b';
+
+  return `
+    La economía peruana muestra una <strong>recuperación moderada</strong>. 
+    La inflación se ubica en <strong style="color:${infColor}">${fmt(inf)}%</strong> anual, 
+    dentro del rango meta del BCRP (1–3%). 
+    El PBI creció <strong style="color:${pbiColor}">${fmt(pbi)}%</strong> en el último trimestre, 
+    impulsado por minería y servicios. 
+    El tipo de cambio se mantiene estable en <strong>S/. ${fmt(tc)}</strong> por dólar. 
+    La morosidad bancaria llega al <strong style="color:${morColor}">${fmt(mor)}%</strong>, 
+    con leve tendencia a la baja. 
+    El desempleo en Lima Metropolitana se sitúa en <strong style="color:${empColor}">${fmt(emp)}%</strong>, 
+    recuperando niveles prepandemia gradualmente.
+  `;
+}
+
+// ── KPI scroll ───────────────────────────────────────────────────────
+document.querySelectorAll('.kpi-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.kpi-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+    const target = card.dataset.target;
+    if (target) {
+      const el = document.getElementById(target);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ── MAIN: load data and render ───────────────────────────────────────
+async function init() {
+  let raw;
+  try {
+    const r = await fetch('data/economic_pulse.json');
+    raw = await r.json();
+  } catch(e) {
+    console.warn('No se pudo cargar JSON externo, usando datos embebidos.');
+    raw = INLINE_DATA;
+  }
+
+  const d = raw.indicadores;
+  const meta = raw.meta;
+
+  // Update header
+  const gen = new Date(meta.generado);
+  const dateStr = gen.toLocaleDateString('es-PE', { day:'2-digit', month:'short', year:'numeric' });
+  document.getElementById('update-label').textContent = `Actualizado: ${dateStr}`;
+  document.getElementById('footer-date').textContent  = `© ${gen.getFullYear()} Alpamayo Data Lab`;
+
+  // ── Narrative ──
+  document.getElementById('narrative-text').innerHTML = buildNarrative(d);
+
+  // ── KPIs ───────
+  const infSeries = d.inflacion.series.interanual;
+  const infCurr   = last(infSeries).valor;
+  const infPrev   = prev(infSeries).valor;
+  setKpi('kpi-inflacion', `${fmt(infCurr)}%`, makeDelta(infCurr, infPrev, true));
+  document.getElementById('lbl-inflacion').textContent = `${fmt(infCurr)}%`;
+
+  const tcSeries  = d.tipo_cambio.series.diario;
+  const tcCurr    = last(tcSeries).valor;
+  const tcPrev    = prev(tcSeries).valor;
+  setKpi('kpi-tc', `${fmt(tcCurr, 3)}`, makeDelta(tcCurr, tcPrev, true));
+  document.getElementById('lbl-tc').textContent = `S/. ${fmt(tcCurr, 3)}`;
+
+  const pbiSeries = d.actividad_economica.series.pbi_trimestral;
+  const pbiCurr   = last(pbiSeries).valor;
+  const pbiPrev   = prev(pbiSeries).valor;
+  setKpi('kpi-pbi', `${fmt(pbiCurr)}%`, makeDelta(pbiCurr, pbiPrev));
+  document.getElementById('lbl-pbi').textContent = `${fmt(pbiCurr)}%`;
+
+  const morSeries = d.credito.series.morosidad;
+  const morCurr   = last(morSeries).valor;
+  const morPrev   = prev(morSeries).valor;
+  setKpi('kpi-mora', `${fmt(morCurr)}%`, makeDelta(morCurr, morPrev, true));
+  document.getElementById('lbl-mora').textContent = `${fmt(morCurr)}%`;
+
+  const empSeries = d.empleo.series.tasa_desempleo;
+  const empCurr   = last(empSeries).valor;
+  const empPrev   = prev(empSeries).valor;
+  setKpi('kpi-emp', `${fmt(empCurr)}%`, makeDelta(empCurr, empPrev, true));
+  document.getElementById('lbl-emp').textContent = `${fmt(empCurr)}%`;
+
+  // ── Tasa de referencia ──
+  const tasaSeries = d.tasa_referencia.series.mensual;
+  document.getElementById('lbl-tasa').textContent = `${fmt(last(tasaSeries).valor)}%`;
+
+  // ── Crédito ──
+  const credSeries = d.credito.series.consumo_sbs;
+  document.getElementById('lbl-cred').textContent = `S/. ${(last(credSeries).valor/1000).toFixed(1)}B`;
+
+  // Alerta morosidad
+  if (morCurr > 4.5) {
+    const alertEl = document.getElementById('mora-alert');
+    document.getElementById('mora-alert-text').textContent =
+      `Morosidad al ${fmt(morCurr)}%: supera el umbral de 4.5%. Monitorear exposición al crédito de consumo.`;
+    alertEl.style.display = 'flex';
+  }
+
+  // ── Importaciones ──
+  const impSeries = d.comercio_exterior.series.importaciones_sunat;
+  document.getElementById('lbl-imp').textContent = `USD ${(last(impSeries).valor/1000).toFixed(2)}B`;
+
+  // ══ CHARTS ══════════════════════════════════════════════════════════
+
+  // Inflación
+  lineChart('chart-inflacion',
+    infSeries.map(p=>p.fecha), infSeries.map(p=>p.valor),
+    COLORS.rust);
+
+  // Tipo de cambio
+  lineChart('chart-tc',
+    tcSeries.map(p=>p.fecha), tcSeries.map(p=>p.valor),
+    COLORS.gold);
+
+  // PBI
+  barChart('chart-pbi',
+    pbiSeries.map(p=>p.fecha), pbiSeries.map(p=>p.valor),
+    COLORS.teal, COLORS.rust);
+
+  // Tasa referencia
+  lineChart('chart-tasa',
+    tasaSeries.map(p=>p.fecha), tasaSeries.map(p=>p.valor),
+    COLORS.slate, true, .1);
+
+  // Empleo
+  lineChart('chart-emp',
+    empSeries.map(p=>p.fecha), empSeries.map(p=>p.valor),
+    COLORS.gold);
+
+  // Crédito consumo
+  lineChart('chart-cred',
+    credSeries.map(p=>p.fecha), credSeries.map(p=>p.valor),
+    COLORS.teal);
+
+  // Morosidad
+  lineChart('chart-mora',
+    morSeries.map(p=>p.fecha), morSeries.map(p=>p.valor),
+    COLORS.rust);
+
+  // Importaciones
+  lineChart('chart-imp',
+    impSeries.map(p=>p.fecha), impSeries.map(p=>p.valor),
+    COLORS.slate);
+
+  // Donut categorías
+  const cat    = d.comercio_exterior.series.importaciones_categoria;
+  const donutC = ['#1d7874','#c9922a','#c0392b','#3d4f5c','#8c9aaa'];
+  donutChart('chart-donut',
+    cat.map(c=>c.categoria), cat.map(c=>c.pct), donutC);
+
+  const legend = document.getElementById('donut-legend');
+  cat.forEach((c, i) => {
+    legend.innerHTML += `
+      <div class="donut-legend-item">
+        <span class="donut-legend-left">
+          <span class="donut-swatch" style="background:${donutC[i]}"></span>
+          ${c.categoria}
+        </span>
+        <span class="donut-pct">${c.pct}%</span>
+      </div>`;
+  });
+}
+
+// ── Inline fallback data (idéntico al JSON externo) ─────────────────
+const INLINE_DATA = {"meta":{"producto":"Alpamayo Economic Pulse","version":"1.0.0","generado":"2024-12-15T08:00:00Z","periodicidad":"semanal","fuentes":["BCRP","INEI","SBS","SUNAT"]},"indicadores":{"inflacion":{"titulo":"Inflación","unidad":"% var. anual","fuente":"BCRP","series":{"interanual":[{"fecha":"Ene-2023","valor":8.66},{"fecha":"Feb-2023","valor":8.65},{"fecha":"Mar-2023","valor":8.40},{"fecha":"Abr-2023","valor":7.97},{"fecha":"May-2023","valor":7.89},{"fecha":"Jun-2023","valor":6.46},{"fecha":"Jul-2023","valor":5.88},{"fecha":"Ago-2023","valor":5.56},{"fecha":"Sep-2023","valor":4.99},{"fecha":"Oct-2023","valor":4.26},{"fecha":"Nov-2023","valor":3.64},{"fecha":"Dic-2023","valor":3.24},{"fecha":"Ene-2024","valor":3.02},{"fecha":"Feb-2024","valor":3.02},{"fecha":"Mar-2024","valor":3.02},{"fecha":"Abr-2024","valor":2.40},{"fecha":"May-2024","valor":2.28},{"fecha":"Jun-2024","valor":2.34},{"fecha":"Jul-2024","valor":2.72},{"fecha":"Ago-2024","valor":2.68},{"fecha":"Sep-2024","valor":2.17},{"fecha":"Oct-2024","valor":1.87},{"fecha":"Nov-2024","valor":2.10},{"fecha":"Dic-2024","valor":2.00}]}},"tipo_cambio":{"titulo":"Tipo de Cambio","unidad":"S/. por USD","fuente":"BCRP","series":{"diario":[{"fecha":"Ene-2023","valor":3.834},{"fecha":"Feb-2023","valor":3.836},{"fecha":"Mar-2023","valor":3.787},{"fecha":"Abr-2023","valor":3.765},{"fecha":"May-2023","valor":3.749},{"fecha":"Jun-2023","valor":3.710},{"fecha":"Jul-2023","valor":3.660},{"fecha":"Ago-2023","valor":3.727},{"fecha":"Sep-2023","valor":3.766},{"fecha":"Oct-2023","valor":3.777},{"fecha":"Nov-2023","valor":3.740},{"fecha":"Dic-2023","valor":3.710},{"fecha":"Ene-2024","valor":3.721},{"fecha":"Feb-2024","valor":3.779},{"fecha":"Mar-2024","valor":3.802},{"fecha":"Abr-2024","valor":3.823},{"fecha":"May-2024","valor":3.782},{"fecha":"Jun-2024","valor":3.775},{"fecha":"Jul-2024","valor":3.769},{"fecha":"Ago-2024","valor":3.735},{"fecha":"Sep-2024","valor":3.752},{"fecha":"Oct-2024","valor":3.810},{"fecha":"Nov-2024","valor":3.830},{"fecha":"Dic-2024","valor":3.780}]}},"tasa_referencia":{"titulo":"Tasa de Referencia BCRP","unidad":"%","fuente":"BCRP","series":{"mensual":[{"fecha":"Ene-2023","valor":7.75},{"fecha":"Feb-2023","valor":7.75},{"fecha":"Mar-2023","valor":7.75},{"fecha":"Abr-2023","valor":7.75},{"fecha":"May-2023","valor":7.75},{"fecha":"Jun-2023","valor":7.75},{"fecha":"Jul-2023","valor":7.75},{"fecha":"Ago-2023","valor":7.75},{"fecha":"Sep-2023","valor":7.50},{"fecha":"Oct-2023","valor":7.25},{"fecha":"Nov-2023","valor":7.00},{"fecha":"Dic-2023","valor":6.75},{"fecha":"Ene-2024","valor":6.50},{"fecha":"Feb-2024","valor":6.25},{"fecha":"Mar-2024","valor":6.00},{"fecha":"Abr-2024","valor":6.00},{"fecha":"May-2024","valor":5.75},{"fecha":"Jun-2024","valor":5.75},{"fecha":"Jul-2024","valor":5.75},{"fecha":"Ago-2024","valor":5.50},{"fecha":"Sep-2024","valor":5.25},{"fecha":"Oct-2024","valor":5.25},{"fecha":"Nov-2024","valor":5.00},{"fecha":"Dic-2024","valor":5.00}]}},"actividad_economica":{"titulo":"Actividad Económica","unidad":"% var. anual","fuente":"BCRP + INEI","series":{"pbi_trimestral":[{"fecha":"T1-2022","valor":3.8},{"fecha":"T2-2022","valor":3.5},{"fecha":"T3-2022","valor":1.7},{"fecha":"T4-2022","valor":1.8},{"fecha":"T1-2023","valor":1.4},{"fecha":"T2-2023","valor":0.6},{"fecha":"T3-2023","valor":-1.0},{"fecha":"T4-2023","valor":3.1},{"fecha":"T1-2024","valor":3.8},{"fecha":"T2-2024","valor":4.2},{"fecha":"T3-2024","valor":3.9},{"fecha":"T4-2024","valor":4.1}]}},"credito":{"titulo":"Crédito al Sector Privado","unidad":"millones S/.","fuente":"BCRP + SBS","series":{"consumo_sbs":[{"fecha":"Ene-2023","valor":68420},{"fecha":"Mar-2023","valor":69200},{"fecha":"May-2023","valor":70100},{"fecha":"Jul-2023","valor":71850},{"fecha":"Sep-2023","valor":72400},{"fecha":"Nov-2023","valor":73200},{"fecha":"Ene-2024","valor":74900},{"fecha":"Mar-2024","valor":75800},{"fecha":"May-2024","valor":76300},{"fecha":"Jul-2024","valor":77800},{"fecha":"Sep-2024","valor":78500},{"fecha":"Nov-2024","valor":79100}],"morosidad":[{"fecha":"Ene-2023","valor":3.82},{"fecha":"Mar-2023","valor":3.91},{"fecha":"May-2023","valor":4.05},{"fecha":"Jul-2023","valor":4.21},{"fecha":"Sep-2023","valor":4.32},{"fecha":"Nov-2023","valor":4.38},{"fecha":"Ene-2024","valor":4.52},{"fecha":"Mar-2024","valor":4.61},{"fecha":"May-2024","valor":4.58},{"fecha":"Jul-2024","valor":4.55},{"fecha":"Sep-2024","valor":4.50},{"fecha":"Nov-2024","valor":4.48}]}},"empleo":{"titulo":"Mercado Laboral","unidad":"% desempleo Lima Metro","fuente":"INEI","series":{"tasa_desempleo":[{"fecha":"T1-2022","valor":9.8},{"fecha":"T2-2022","valor":8.2},{"fecha":"T3-2022","valor":7.4},{"fecha":"T4-2022","valor":7.1},{"fecha":"T1-2023","valor":7.8},{"fecha":"T2-2023","valor":6.9},{"fecha":"T3-2023","valor":6.4},{"fecha":"T4-2023","valor":6.1},{"fecha":"T1-2024","valor":7.2},{"fecha":"T2-2024","valor":6.7},{"fecha":"T3-2024","valor":6.3},{"fecha":"T4-2024","valor":6.0}]}},"comercio_exterior":{"titulo":"Importaciones","unidad":"millones USD","fuente":"SUNAT","series":{"importaciones_sunat":[{"fecha":"Ene-2023","valor":3820},{"fecha":"Feb-2023","valor":3650},{"fecha":"Mar-2023","valor":4100},{"fecha":"Abr-2023","valor":3980},{"fecha":"May-2023","valor":4200},{"fecha":"Jun-2023","valor":3870},{"fecha":"Jul-2023","valor":4050},{"fecha":"Ago-2023","valor":3920},{"fecha":"Sep-2023","valor":4010},{"fecha":"Oct-2023","valor":4180},{"fecha":"Nov-2023","valor":3850},{"fecha":"Dic-2023","valor":4350},{"fecha":"Ene-2024","valor":3750},{"fecha":"Feb-2024","valor":3620},{"fecha":"Mar-2024","valor":4080},{"fecha":"Abr-2024","valor":4050},{"fecha":"May-2024","valor":4220},{"fecha":"Jun-2024","valor":3940},{"fecha":"Jul-2024","valor":4100},{"fecha":"Ago-2024","valor":4010},{"fecha":"Sep-2024","valor":4150},{"fecha":"Oct-2024","valor":4280},{"fecha":"Nov-2024","valor":3920},{"fecha":"Dic-2024","valor":4480}],"importaciones_categoria":[{"categoria":"Insumos","pct":42.1},{"categoria":"Bienes de Capital","pct":28.4},{"categoria":"Bienes de Consumo","pct":22.8},{"categoria":"Combustibles","pct":5.3},{"categoria":"Otros","pct":1.4}]}}}};
+
+init();
+</script>
+</body>
+</html>
